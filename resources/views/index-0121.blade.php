@@ -26,7 +26,7 @@
         <div class="row">   
             <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-header">Daftar Guru, Mata Pelajaran, dan Kelas</div>
+                    <div class="card-header">NAMA SISWA DAN KELAS</div>
                     <div class="card-body">
                         <form class="example">
                             <input type="text" placeholder="Search.." name="search">
@@ -37,18 +37,17 @@
                         <thead>
                         <tr>
                             <th>No</th>
+                            <th>Siswa</th>
                             <th>Kelas</th>
-                            <th>Mata Pelajaran</th>
-                            <th>Guru</th>
+
                         </tr>
                         </thead>
                         <tbody>
                             @foreach ($select_join as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
+                                <td>{{ $item->nama_siswa }}</td>
                                 <td>{{ $item->nama_kelas }}</td>
-                                <td>{{ $item->nama_pelajaran }}</td>
-                                <td>{{ $item->nama_guru }}</td>
                             </tr>
                             @endforeach
                         </tbody>
